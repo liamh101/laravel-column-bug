@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  mysql:
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: password
+  php:
+    ports:
+      - '8080:8080'
